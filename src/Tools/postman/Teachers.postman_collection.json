@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "fe3212ce-8bf9-4348-a7c8-659474e7b803",
+		"name": "Teachers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"email\": \"email@email.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Teacher",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\" : 1,\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"email\": \"email@emial2.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/Patch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"Patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/Get/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"Get",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obsolete Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/Obsolete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"Obsolete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Teacher",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/Restore/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"Restore",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Teachers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"albumNumber\": 12347,\r\n  \"majorId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Teacher/Fetch/?search=Mar&page=1&pageSize=10&obsolete=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teacher",
+						"Fetch",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Mar"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "obsolete",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

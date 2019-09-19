@@ -1,0 +1,13 @@
+.fold-app-bar {
+	margin-left: 240px !important;
+	width: calc(100% - 240px) !important;
+
+}
+
+.app-navbar {
+	& > div {
+		display: flex;
+		justify-content: space-between;
+	}
+	transition: 250ms width ease-in-out;
+}

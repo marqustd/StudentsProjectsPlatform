@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "9ae075cd-2dd5-42af-b56d-3fe27ba4ade1",
+		"name": "Subjects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Subject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"Subject\",\r\n  \"teacherId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Subject",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\" : 1,\r\n  \"name\": \"edited\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/Patch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"Patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subject",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/Get/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"Get",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obsolete Subject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/Obsolete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"Obsolete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Subject",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/Restore/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"Restore",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchSubjects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Subject/Fetch/?search=ed&page=1&pageSize=10&obsolete=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Subject",
+						"Fetch",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "ed"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "obsolete",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

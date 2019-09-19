@@ -1,0 +1,31 @@
+.subjects-panel {
+	padding-top: 20px;
+	padding-bottom: 500px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	.subjects-table {
+		margin: 25px !important;
+		min-width: 250px;
+		max-width: 1000px;
+		width: 100%;
+		
+	}
+	.subject-add {
+		margin: 25px !important;
+		min-width: 250px;
+		max-width: 500px;
+		width: 100%;
+		.subject-add-panel {
+			flex: auto;
+			& > *{
+				width: 100%;
+			}
+			.subject-add-button{
+				margin-top: 20px;
+			}
+		}
+	}
+}

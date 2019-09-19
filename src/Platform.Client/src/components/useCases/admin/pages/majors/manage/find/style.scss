@@ -1,0 +1,30 @@
+.majors-panel {
+	padding-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	.majors-table {
+		margin: 25px !important;
+		min-width: 250px;
+		max-width: 1000px;
+		width: 100%;
+		
+	}
+	.major-add {
+		margin: 25px !important;
+		min-width: 250px;
+		max-width: 500px;
+		width: 100%;
+		.major-add-panel {
+			flex: auto;
+			.major-add-panel-content{
+				width: 100%;
+			}
+			.major-add-button{
+				margin-top: 20px;
+			}
+		}
+	}
+}

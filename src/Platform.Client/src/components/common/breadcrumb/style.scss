@@ -1,0 +1,17 @@
+.main-section .breadcrumb {
+	padding: 10px 15px;
+	margin-bottom: 20px;
+	display: flex;
+	align-self: flex-start;
+	& > * {
+		display: inline-block;
+		padding: 0 2px;
+	}
+
+	& > a {
+		color: black !important;
+	}
+	.crumb {
+		display: inline-flex;
+	}
+}

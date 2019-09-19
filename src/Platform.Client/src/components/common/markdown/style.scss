@@ -1,0 +1,11 @@
+.markdown-editor {
+	background-color: whitesmoke;
+	flex: auto;
+	margin: 25px;
+	.editor-actions {
+		display: flex;
+		justify-content: flex-end;
+		background-color: #3f51b5;
+		border-radius: 5px;
+	}
+}

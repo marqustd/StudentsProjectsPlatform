@@ -1,0 +1,6 @@
+@echo off
+echo Removing last Platform migration...
+pushd %0\..\..\src
+dotnet ef migrations remove -c PlatformDbContext -p Platform.Infrastructure/Platform.Infrastructure.csproj -s Platform.API/Platform.API.csproj
+popd
+set /p DUMMY=Hit ENTER to continue...

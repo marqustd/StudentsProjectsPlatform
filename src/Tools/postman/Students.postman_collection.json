@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "0084bf71-364c-4b9d-8092-a32f50256f45",
+		"name": "Students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"albumNumber\": 12348,\r\n  \"majorId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Student",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\" : 1,\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"albumNumber\": 12348,\r\n  \"majorId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/Patch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"Patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/Get/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"Get",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obsolete Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/Obsolete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"Obsolete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Student",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/Restore/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"Restore",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Students",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"albumNumber\": 12347,\r\n  \"majorId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Student/Fetch/?search=Mar&page=1&pageSize=10&obsolete=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Student",
+						"Fetch",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Mar"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "obsolete",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

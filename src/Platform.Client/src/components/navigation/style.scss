@@ -1,0 +1,14 @@
+.basic-nagivation {
+	transition: 250ms padding ease-in-out !important;
+}
+
+.expand-navigation {
+	padding-right: 240px !important;
+}
+
+.expand-drawer {
+	& > div {
+		width: 240px !important;
+		transition: 250ms transform ease-in-out !important;
+	}
+}

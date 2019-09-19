@@ -1,0 +1,6 @@
+@echo off
+echo Removing last IdentityServer migration...
+pushd %0\..\..\src
+dotnet ef migrations remove -c UsersDbContext -p Platform.IdentityServer/Platform.IdentityServer.csproj
+popd
+set /p DUMMY=Hit ENTER to continue...

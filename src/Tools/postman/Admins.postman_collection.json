@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "abb9a502-a6d8-4649-9967-39a59c0c84e2",
+		"name": "Admins",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"email\": \"email@email.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Admin",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\" : 1,\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"email\": \"email@emial2.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/Patch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"Patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/Get/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"Get",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obsolete Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/Obsolete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"Obsolete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Admin",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/Restore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"Restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Admins",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Marek\",\r\n  \"lastName\": \"Zabka\",\r\n  \"albumNumber\": 12347,\r\n  \"majorId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/Admin/Fetch/?search=Mar&page=1&pageSize=10&obsolete=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Admin",
+						"Fetch",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Mar"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "obsolete",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,17 @@
+.comment-writer {
+	display: flex;
+	padding: 4px;
+	border: 2px solid rgba($color: #000000, $alpha: .1);
+	border-radius: 5px;
+	.comment-input {
+		flex:auto;
+		padding-left: 5px;
+		input {
+			line-height: 1.5rem;
+			padding: 10px 0 2px 0;
+		}
+	}
+	.comment-send {
+		align-self: flex-start;
+	}
+}

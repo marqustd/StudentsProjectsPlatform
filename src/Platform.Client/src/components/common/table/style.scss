@@ -1,0 +1,25 @@
+.common-table {
+	.common-table-header {
+		display: flex;
+		justify-content: space-between;
+		background-color: #8b2a62;
+		height: 36px;
+		padding: 10px 10px 10px 24px;
+		align-items: center;
+		& > button {
+			height: 100%;
+		}
+	}
+	.common-table-cell {
+		padding: 14px 24px;
+		display: flex;
+		
+	}
+	.common-table-actions {
+		display: flex;
+		padding: 0 10px 10px 10px;
+		& > * {
+			margin-right: 10px;
+		}
+	}
+}

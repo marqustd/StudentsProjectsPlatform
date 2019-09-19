@@ -1,0 +1,22 @@
+div.state-selector {
+    margin: 0 20px;
+}
+
+div.modal-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.report-download {
+    a {
+        text-decoration: none;
+        color: black;
+        span {
+            display: flex;
+            justify-content: space-between;
+            & > svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}

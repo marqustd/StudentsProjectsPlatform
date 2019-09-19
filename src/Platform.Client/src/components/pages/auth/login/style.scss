@@ -1,0 +1,29 @@
+
+.login-form {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"username"
+	"password"
+	"remember"
+	"login";
+	grid-column-gap: 10px;
+
+	.username-input {
+		grid-area: username;
+	}
+
+	.password-input {
+		grid-area: password;
+	}
+
+	.remember-input {
+		grid-area: remember;
+	}
+
+	.login-button {
+		grid-area: login;
+		height: 36px;
+	}
+}

@@ -1,0 +1,24 @@
+.main-section{
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	.details-panel {
+		display: flex;
+		flex-direction: column;
+		padding: 25px;
+		margin:25px;
+		min-width: 300px;
+		max-width: 500px;
+		width: 100%;
+
+		.details-buttons {
+			padding-top: 10px;
+			display: flex;
+			justify-content: center;
+			& > * {
+				width: 100%;
+				margin: 10px !important;
+			}
+		}
+	}
+}

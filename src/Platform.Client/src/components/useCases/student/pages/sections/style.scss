@@ -1,0 +1,9 @@
+.control-footer {
+    display: flex;
+    justify-content: flex-end;
+    
+    button.sign-out-btn,
+    button.sign-int-btn {
+        width: auto;
+    }
+}

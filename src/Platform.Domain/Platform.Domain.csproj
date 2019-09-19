@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Platform.Artifact\Platform.Artifacts.csproj" />
+    <ProjectReference Include="..\Platform.Infrastructure\Platform.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
+    <PackageReference Include="Spire.PDF" Version="5.6.2" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+div.comment {
+	padding: 0 10px;
+	overflow: unset; 
+	.comment-header {
+		display: flex;
+		justify-content: flex-end;
+		&>span {
+			padding-left: 5px;
+			text-emphasis: italic;
+		}
+	}
+
+	.comment-content {
+		text-align: right;
+		line-height: initial;
+		padding-bottom: 5px;
+	}
+}

@@ -1,0 +1,12 @@
+.activities {
+	padding: 10px 0;
+	.activity-container {
+		display: flex;
+		justify-content: space-between;
+		
+		.activity {
+			flex:auto;
+		}
+		border-bottom: 1px solid rgba($color: #000000, $alpha: .1)
+	}
+}

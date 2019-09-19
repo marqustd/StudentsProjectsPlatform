@@ -1,0 +1,95 @@
+
+.standard-register-form {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-template-areas: 
+	"firstName firstName lastName lastName"
+	"email email album album"
+	"password password password password"
+	"confirmPassword confirmPassword confirmPassword confirmPassword"
+	"agree agree agree agree"
+	"register register register register";
+	
+	grid-column-gap: 10px;
+
+	.first-name-input {
+		grid-area: firstName;
+	}
+		
+	.last-name-input {
+		grid-area: lastName;
+	}
+		
+	.email-input {
+		grid-area: email;
+	}
+
+	.album-input {
+		grid-area: album;
+	}
+
+	.password-input {
+		grid-area: password;
+	}
+	
+	.confirm-password-input {
+		grid-area: confirmPassword;
+	}
+
+	.agree-input {
+		grid-area: agree;
+	}
+
+	.register-button {
+		grid-area: register;
+		height: 36px;
+	}
+}
+
+.google-register-header {
+padding-bottom: 20px;
+}
+
+.google-register-form {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
+	grid-template-areas: 
+	"email email"
+	"firstName firstName"
+	"lastName lastName"
+	"album album"
+	"agree agree"
+	"cancel register";
+
+	.email-input {
+		grid-area: email;
+	}
+
+	.first-name-input {
+		grid-area: firstName;
+	}
+
+	.last-name-input {
+		grid-area: lastName;
+	}
+
+	.album-number-input {
+		grid-area: album;
+	}
+
+	.agree-input {
+		grid-area: agree;
+	}
+
+	.cancel-button {
+		grid-area: cancel;
+	}
+
+	.register-button {
+		grid-area: register;
+	}
+
+}
